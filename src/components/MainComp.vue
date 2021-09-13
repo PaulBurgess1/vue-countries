@@ -62,12 +62,14 @@
 
                 <tr>
                   <th scope="row">Population</th>
-                  <td>{{countries[selected_country_id].population.toLocaleString("en-US")}}</td>
+                  <td v-if="countries[selected_country_id].population">{{countries[selected_country_id].population.toLocaleString("en-US")}}</td>
+                  <td v-else>N/A</td>
                 </tr>
 
                 <tr>
                   <th scope="row">Area</th>
-                  <td>{{countries[selected_country_id].area.toLocaleString("en-US")}} km²</td>
+                  <td v-if="countries[selected_country_id].area">{{countries[selected_country_id].area.toLocaleString("en-US")}} km²</td>
+                  <td v-else> N/A</td>
                 </tr>
 
                 <tr>
